@@ -30,7 +30,10 @@ export interface PreferencePayer {
   /** Endereço de e-mail do comprador. */
   email?: string | undefined;
   /** Telefone do comprador. */
-  phone?: Omit<Phone, 'extension'> | undefined;
+  phone?: {
+    area_code: string;
+    number: number;
+  } | undefined;
   /** Identificação pessoal. */
   identification?: Identification | undefined;
   /** Endereço do comprador. */
